@@ -306,7 +306,7 @@ function Gate({ onUnlock }) {
         <button className="gate-btn" onClick={submit}>Access Portal</button>
         {err && <div className="gate-err">Incorrect key. Contact the patient for access.</div>}
         <div className="gate-disclaimer">
-          <strong>Provider notice:</strong> This portal contains longitudinal clinical data organized for specialist review. All findings are sourced directly from medical records, laboratory results, and imaging reports. Computational genomic analyses are labeled as research-grade and do not constitute clinical diagnostic results. For clinical decisions, verify against primary records.
+          <strong>Provider notice:</strong> This portal contains longitudinal clinical data organized for provider review. All findings are sourced directly from medical records, laboratory results, and imaging reports. Computational genomic analyses are labeled as research-grade and do not constitute clinical diagnostic results. For clinical decisions, verify against primary records.
         </div>
       </div>
     </div>
@@ -323,14 +323,14 @@ function TabOverview() {
     <div>
       <div className="page-header">
         <div className="page-title serif">Clinical Overview</div>
-        <div className="page-subtitle">A framework for understanding a multi-system presentation spanning 20+ years of records. This portal is designed so any specialist can orient to the full picture in under 10 minutes.</div>
+        <div className="page-subtitle">A framework for understanding a multi-system presentation spanning 20+ years of records. This portal is designed so any provider can orient to the full picture in under 10 minutes.</div>
       </div>
 
       <div className="about-box">
         <div className="about-title">About This Portal</div>
-        <div className="about-text">This portal consolidates 20+ years of longitudinal records for specialist review. Each new consultant typically receives extensive documentation with limited time to extract the underlying pattern; specialty tabs present that synthesis by discipline, with source data in drawers.</div>
+        <div className="about-text">This portal consolidates 20+ years of longitudinal records for provider review. Each new consultant typically receives extensive documentation with limited time to extract the underlying pattern; specialty tabs present that synthesis by discipline, with source data in drawers.</div>
         <div className="about-text">Clinical findings are sourced from physician notes, imaging reports, and laboratory results. Computational genomic analyses (AlphaGenome, 23andMe) are labeled research-grade and supplementary — they do not represent clinical diagnostic findings.</div>
-        <div className="about-disclaimer"><strong>Research content notice:</strong> Sections marked with a ⚗ symbol contain computational predictions from AlphaGenome (Google DeepMind) or 23andMe variant analysis. These are model outputs for research context only. They are included to support specialist evaluation, not to replace clinical judgment or alter confirmed diagnoses.</div>
+        <div className="about-disclaimer"><strong>Research content notice:</strong> Sections marked with a ⚗ symbol contain computational predictions from AlphaGenome (Google DeepMind) or 23andMe variant analysis. These are model outputs for research context only. They are included to support provider evaluation, not to replace clinical judgment or alter confirmed diagnoses.</div>
       </div>
 
       <Section title="Patient Summary" dot="#0F2537">
@@ -644,6 +644,184 @@ function TabPulmonary() {
   );
 }
 
+function TabRheumatology() {
+  return (
+    <div>
+      <div className="page-header">
+        <div className="page-title serif">Rheumatology & Systemic Inflammation</div>
+        <div className="page-subtitle">Prepared for initial Rheumatology consultation. Summarizes the differential for systemic eosinophilic disease (EGPA vs. HES), objective autoantibody data, and multi-system connective tissue involvement.</div>
+      </div>
+
+      <AlertBox type="info">
+        <strong>February 2026 ED directive:</strong> Presented with chest pain, wheezing, and transient eGFR drop. Discharge instructions explicitly stated: <em>"follow up with rheumatology and hematology for further workup of autoimmune and eosinophilia concerns."</em>
+      </AlertBox>
+
+      <Section title="The EGPA / HES Differential" dot="#DC2626">
+        <div className="narrative">
+          Patient exhibits the classic clinical triad warranting evaluation for Eosinophilic Granulomatosis with Polyangiitis (EGPA) or Hypereosinophilic Syndrome (HES). Mayo Clinic Hematology formally opened this differential in April 2026. The exclusion workup completed at that visit eliminated all malignant and clonal causes — the differential now sits between ANCA-negative EGPA and idiopathic HES.
+        </div>
+        <div className="finding-grid">
+          <div className="finding-card confirmed">
+            <div className="finding-card-label">Phase 1 — Allergic (Confirmed)</div>
+            <div className="finding-card-text"><strong>Severe Persistent Asthma</strong> — steroid-dependent, multiple prednisone bursts per year. Stepped up to mepolizumab (Nucala) April 2026. Chronic idiopathic urticaria documented since at least 2011.</div>
+          </div>
+          <div className="finding-card confirmed">
+            <div className="finding-card-label">Phase 2 — Eosinophilic (Confirmed)</div>
+            <div className="finding-card-text"><strong>Chronic Eosinophilia</strong> — persistent elevation peaking at 15.2%. Rebounds on steroid taper. Clonal/malignant processes excluded via FISH and flow cytometry (Mayo April 2026).</div>
+          </div>
+          <div className="finding-card active">
+            <div className="finding-card-label">Phase 3 — Vasculitic (Under Evaluation)</div>
+            <div className="finding-card-text"><strong>Multi-organ involvement</strong> — cardiac (declining EF, NT-proBNP 263 flagged), renal (eGFR episodes to 73), neurological (paresthesia hands/feet), pulmonary (FeNO 82, bronchial wall thickening).</div>
+          </div>
+        </div>
+        <AlertBox type="warning">
+          <strong>ANCA-negative does not exclude EGPA.</strong> MPO and PR3 antibodies are negative (Mayo April 2026). However, up to 60% of clinical EGPA presentations are ANCA-negative — particularly cardiac-predominant EGPA, which is the phenotype most consistent with this patient's presentation. ANCA-negative status is documented, not dismissive.
+        </AlertBox>
+      </Section>
+
+      <Section title="Objective Autoimmune & Inflammatory Markers" dot="#D97706">
+        <div className="stat-row">
+          <div className="stat-box flagged"><div className="stat-label">Rheumatoid Factor</div><div className="stat-value">17.3</div><div className="stat-ref">U/mL · ref ≤14.0 · Dec 2025</div><div className="stat-flag H">ELEVATED</div></div>
+          <div className="stat-box critical"><div className="stat-label">FeNO</div><div className="stat-value">82</div><div className="stat-ref">ppb · ULN 39 · Apr 2026</div><div className="stat-flag ABN">2× UPPER LIMIT</div></div>
+          <div className="stat-box flagged"><div className="stat-label">Eosinophils (peak)</div><div className="stat-value">15.2%</div><div className="stat-ref">Absolute peak · multiple dates</div><div className="stat-flag H">CHRONIC</div></div>
+          <div className="stat-box normal"><div className="stat-label">ANA</div><div className="stat-value">NEG</div><div className="stat-ref">&lt;1:80 · Apr 2026</div></div>
+          <div className="stat-box normal"><div className="stat-label">MPO-ANCA</div><div className="stat-value">NEG</div><div className="stat-ref">&lt;0.2 · Apr 2026</div></div>
+          <div className="stat-box normal"><div className="stat-label">PR3-ANCA</div><div className="stat-value">NEG</div><div className="stat-ref">&lt;0.2 · Apr 2026</div></div>
+        </div>
+        <AlertBox type="warning">
+          <strong>Anti-CCP testing outstanding.</strong> RF elevated at 17.3 U/mL (above ref 14.0). Anti-CCP has not been drawn. This is the critical next step to determine whether the RF elevation represents early seronegative RA, CTD overlap, or a nonspecific inflammatory marker in the context of the eosinophilic process.
+        </AlertBox>
+        <div className="table-wrap" style={{marginTop:12}}>
+          <table>
+            <thead><tr><th>Condition</th><th>Test</th><th>Result</th><th>Status</th></tr></thead>
+            <tbody>
+              {[
+                ["ANCA-positive vasculitis","MPO + PR3 ANCA","Both <0.2","Excluded"],
+                ["Systemic mastocytosis","Serum tryptase","2.3 ng/mL (normal)","Excluded"],
+                ["B-cell lymphoproliferative","Flow cytometry","No monotypic B-cells","Excluded"],
+                ["T-cell lymphoproliferative","TCR PCR","No clonal rearrangement","Excluded"],
+                ["Autoimmune CTD","ANA","<1:80 negative","Excluded"],
+                ["FIP1L1-PDGFRA CEL","Chronic Eos FISH panel","All loci normal","Excluded"],
+                ["Parasitic infection","GI pathogen + O&P","All negative","Excluded"],
+                ["RA / seronegative","Anti-CCP","NOT YET DRAWN","Outstanding"],
+              ].map(([c,t,r,s],i)=>(
+                <tr key={i}>
+                  <td style={{fontWeight:500}}>{c}</td>
+                  <td style={{fontSize:12,color:'var(--gray-600)'}}>{t}</td>
+                  <td className={s==="Excluded"?"flag-neg":s==="Outstanding"?"flag-h":""}>{r}</td>
+                  <td><span className={`pill ${s==="Excluded"?"excluded":s==="Outstanding"?"urgent":"active"}`}>{s}</span></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </Section>
+
+      <Section title="Multi-System Organ Involvement" dot="#0D9488">
+        <div className="narrative">
+          The following organ systems show documented involvement consistent with a systemic eosinophilic vasculitic process. Each finding is sourced from clinical records.
+        </div>
+        <div className="table-wrap">
+          <table>
+            <thead><tr><th>System</th><th>Finding</th><th>Source / Date</th><th>Significance</th></tr></thead>
+            <tbody>
+              {[
+                ["Cardiac","NT-proBNP 263 pg/mL (above ref ≤162). EF decline 56% → 50-55%. Nonischemic cardiomyopathy (TTN). Grade I diastolic dysfunction.","Mayo 04/01/2026 · Echo 02/2026","Eosinophilic cardiotoxicity + TTN structural substrate = dual-hit"],
+                ["Pulmonary","FeNO 82 ppb (2× ULN). Pre-BD FEV1/FVC 57%. Bronchial wall thickening. Air trapping.","Mayo PFT 04/15/2026","Eosinophilic airway inflammation — not simple atopic asthma"],
+                ["Renal","eGFR episodes to 65-73 on multiple occasions. Predicted 24hr protein 224 mg/day (borderline). Trigonitis.","Multiple dates · Mayo 04/01/2026","Eosinophilic interstitial nephritis pattern; NSAID contraindicated"],
+                ["Neurological","Documented paresthesia hands and feet. Chronic myalgia since high school. Chronic Pain Syndrome.","Clinical notes · Dr. Fernandes UNMC 2020","Peripheral neuropathy pattern consistent with EGPA Phase 3"],
+                ["Dermatologic","Chronic idiopathic urticaria documented since at least 2011. History of hives.","Medical records ≥2011","Mast cell / eosinophilic allergic manifestation"],
+                ["GI / Pelvic","IBS, spastic pelvic floor syndrome. Retrospective eosinophil staining of retained surgical specimens outstanding.","Documented diagnoses","Eosinophilic GI/pelvic involvement possible — specimens not yet stained"],
+              ].map(([sys,finding,source,sig],i)=>(
+                <tr key={i}>
+                  <td style={{fontWeight:600,color:'var(--navy)',whiteSpace:'nowrap'}}>{sys}</td>
+                  <td style={{fontSize:12}}>{finding}</td>
+                  <td style={{fontSize:11,color:'var(--gray-600)'}}>{source}</td>
+                  <td style={{fontSize:11,color:'var(--teal)',fontStyle:'italic'}}>{sig}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </Section>
+
+      <Section title="Connective Tissue & Vascular Fragility Overlap" dot="#7C3AED">
+        <div className="narrative">
+          A concurrent heritable connective tissue disorder is suspected and awaiting formal genetics evaluation. The rheumatologic relevance is significant: EGPA causes eosinophilic vasculitis, and if vascular walls are simultaneously compromised by CTD-related collagen deficiency, the threshold for vascular events is lowered. Both processes independently affect the same end organs.
+        </div>
+        <div className="finding-grid">
+          <div className="finding-card active">
+            <div className="finding-card-label">Genomic Signal ⚗ (Research)</div>
+            <div className="finding-card-text"><strong>COL3A1 rs1800255 heterozygous (AG)</strong> — vEDS-associated variant. AlphaGenome predicts top 0.05% functional effect in cardiac tissue (quantile 0.9995 — highest in full batch). Pending clinical genetics confirmation.</div>
+          </div>
+          <div className="finding-card confirmed">
+            <div className="finding-card-label">Imaging Confirmed</div>
+            <div className="finding-card-text"><strong>Aberrant right subclavian artery</strong> — retroesophageal origin from thoracic aorta. Right apical blebs. Both documented CT Chest Mayo 04/15/2026.</div>
+          </div>
+          <div className="finding-card confirmed">
+            <div className="finding-card-label">Cardiac Imaging</div>
+            <div className="finding-card-text"><strong>Redundant interatrial septum</strong> + mild multivalvular regurgitation (mitral, tricuspid, aortic). Multi-valve without rheumatic history — CTD marker. Echo 07/2024.</div>
+          </div>
+          <div className="finding-card confirmed">
+            <div className="finding-card-label">Physical Exam (Mayo)</div>
+            <div className="finding-card-text"><strong>Hypermobility Joint</strong> — Active Problem. Beighton markers confirmed by Dr. Poirier: knee hyperextension, ankle hyperextension, thumb-to-wrist apposition.</div>
+          </div>
+        </div>
+        <QuoteBlock
+          text="I have ordered genetic consultation as I am concerned that in addition to the cardiomyopathy, there are musculoskeletal issues related to this genetic pathogenic variant."
+          attr="Dr. Maria Poirier, M.D., Mayo Clinic — documented in clinical note"
+        />
+      </Section>
+
+      <Section title="The Triple-Hit Hypothesis" dot="#0F2537">
+        <div className="narrative">
+          The emerging clinical picture suggests three concurrent pathological processes, each independently serious and potentially interacting to produce a phenotype more severe than any alone would predict.
+        </div>
+        <div className="finding-grid">
+          <div className="finding-card confirmed">
+            <div className="finding-card-label">Hit 1 — Confirmed</div>
+            <div className="finding-card-text"><strong>TTN Pathogenic Frameshift Deletion</strong><br/>Structural cardiac substrate. Haploinsufficiency → dilated cardiomyopathy. High family penetrance. EF declining.</div>
+          </div>
+          <div className="finding-card active">
+            <div className="finding-card-label">Hit 2 — Active Investigation</div>
+            <div className="finding-card-text"><strong>EGPA / HES</strong><br/>Eosinophilic infiltration of cardiac, pulmonary, renal, and neurological tissue. ANCA-negative. Steroid-resistant. Mepolizumab initiated.</div>
+          </div>
+          <div className="finding-card active">
+            <div className="finding-card-label">Hit 3 — Pending Genetics</div>
+            <div className="finding-card-text"><strong>Heritable CTD (vEDS suspected)</strong><br/>Vascular wall fragility from collagen deficiency. Eosinophilic vasculitis acting on already-compromised vessels. Formal genetics evaluation ordered.</div>
+          </div>
+        </div>
+        <AlertBox type="danger">
+          <strong>Interaction risk:</strong> EGPA-driven eosinophilic vasculitis inflames and infiltrates vessel walls. If those walls carry vEDS-related structural collagen deficiency, the combined risk of arterial event is substantially higher than either condition alone would predict. This interaction has not yet been formally evaluated as an integrated clinical question.
+        </AlertBox>
+      </Section>
+
+      <Section title="Priority Questions for Rheumatology" dot="#DC2626">
+        <div className="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Question</th><th>Supporting Evidence</th></tr></thead>
+            <tbody>
+              {[
+                ["1","Does the multi-system eosinophilic involvement pattern meet criteria for ANCA-negative EGPA, and if not, what additional workup is needed to formally evaluate or exclude it?","Three-phase pattern (allergic → eosinophilic → vasculitic); cardiac, pulmonary, renal, neurological involvement; steroid resistance; December 2025 paradoxical crisis"],
+                ["2","Is the elevated RF (17.3 U/mL) a CTD overlap marker, an early RA signal, or a nonspecific inflammatory finding? Anti-CCP has not been drawn.","RF 17.3 above ref 14.0; ANA negative; full CTD serology incomplete"],
+                ["3","Is there evidence of eosinophilic vasculitis on skin or tissue biopsy that would support the EGPA diagnosis?","Chronic urticaria since 2011; multi-organ involvement pattern"],
+                ["4","How does the suspected vascular CTD (COL3A1 variant, aberrant subclavian, apical blebs) change the risk framing for eosinophilic vasculitis affecting already-fragile vessel walls?","vEDS-associated COL3A1 variant pending genetics; documented vascular anomalies on imaging"],
+                ["5","Is retrospective eosinophil staining of retained surgical pathology specimens (2017 laparoscopy, 2020 hysterectomy) feasible and indicated?","If eosinophilic infiltration is found in pelvic tissue predating this workup, it significantly extends the disease timeline"],
+              ].map(([n,q,e],i)=>(
+                <tr key={i}>
+                  <td style={{fontWeight:700,color:'var(--navy)',textAlign:'center',width:32}}>{n}</td>
+                  <td style={{fontWeight:500,fontSize:13}}>{q}</td>
+                  <td style={{fontSize:12,color:'var(--gray-600)'}}>{e}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </Section>
+    </div>
+  );
+}
+
 function TabCTD() {
   return (
     <div>
@@ -726,7 +904,7 @@ function TabCTD() {
           genotype="AG (heterozygous)" quantile={0.9995}
           tissue="Heart (UBERON:0000948) — highest signal in full batch"
           imgKey="col3a1"
-          interpretation="This is the highest quantile score in the entire AlphaGenome batch (0.9995 — top 0.05%). AlphaGenome predicts this COL3A1 variant has a top 0.05% functional effect on expression specifically in cardiac tissue. This is the same tissue where redundant interatrial septum and multivalvular regurgitation are documented. The variant is heterozygous — one copy affected. Combined with the vascular anomaly pattern (aberrant subclavian, apical blebs), this finding warrants formal vEDS evaluation by a genetics specialist."
+          interpretation="This is the highest quantile score in the entire AlphaGenome batch (0.9995 — top 0.05%). AlphaGenome predicts this COL3A1 variant has a top 0.05% functional effect on expression specifically in cardiac tissue. This is the same tissue where redundant interatrial septum and multivalvular regurgitation are documented. The variant is heterozygous — one copy affected. Combined with the vascular anomaly pattern (aberrant subclavian, apical blebs), this finding warrants formal vEDS evaluation by a genetics provider."
         />
       </Section>
 
@@ -919,7 +1097,7 @@ function TabGenomics() {
       </div>
       
       <AlertBox type="warning">
-        <strong>Research content:</strong> This entire tab contains computational predictions from AlphaGenome and 23andMe variant analysis. None of these outputs are clinical diagnostic results. They are included as supplementary context for specialist evaluation. Confirmed clinical diagnoses are presented on the relevant specialty tabs.
+        <strong>Research content:</strong> This entire tab contains computational predictions from AlphaGenome and 23andMe variant analysis. None of these outputs are clinical diagnostic results. They are included as supplementary context for provider evaluation. Confirmed clinical diagnoses are presented on the relevant specialty tabs.
       </AlertBox>
 
       <Section title="AlphaGenome Batch Summary" dot="#7C3AED">
@@ -1089,7 +1267,7 @@ function TabMeds() {
 
       <Section title="Biologics & Immunology" dot="#0D9488">
         {[
-          {name:"Mepolizumab (Nucala)",dose:"100mg SQ monthly",started:"04/16/2026",note:"Anti-IL-5 biologic. First dose at Mayo Clinic 04/16/2026. Home supply processing at Accredo Specialty Pharmacy as of June 2026.",flag:"active",flagLabel:"NEW"},
+          {name:"Mepolizumab (Nucala)",dose:"100mg SQ monthly",started:"TBD",note:"Anti-IL-5 biologic. First dose processing at Accredo Specialty Pharmacy as of June 2026.",flag:"active",flagLabel:"NEW"},
           {name:"Montelukast (Singulair)",dose:"10mg daily (bedtime)",started:"09/10/2024",note:"Leukotriene receptor antagonist. Dual-purpose: asthma controller and MCAS protocol.",flag:"active",flagLabel:"ACTIVE"},
           {name:"Fluticasone-salmeterol (Advair)",dose:"250-50 mcg 1 puff BID",started:"02/08/2026",note:"ICS + LABA. ADRB2 variant affects salmeterol target. GLCCI1 variant predicts reduced steroid response.",flag:"pgx",flagLabel:"PGx: ADRB2"},
           {name:"Albuterol",dose:"90mcg/act 2 puffs PRN",started:"—",note:"Rescue bronchodilator. Currently requiring near-daily use to maintain airway. ADRB2 variant affects receptor.",flag:"active",flagLabel:"RESCUE"},
@@ -1125,8 +1303,7 @@ function TabMeds() {
           {name:"Baclofen (Lioresal)",dose:"10mg daily PRN",started:"03/09/2020",note:"Muscle relaxant for spasms. Also under review 06/18/2026 — more targeted options for CTD-related spasm being considered.",flag:"pending",flagLabel:"UNDER REVIEW"},
           {name:"Tramadol (Ultram)",dose:"50mg q6h PRN",started:"02/19/2018",note:"Analgesic PRN. OPRM1 A118G homozygous AA — altered opioid receptor binding. CYP2D6 *6 allele affects metabolism to active form.",flag:"pgx",flagLabel:"PGx: OPRM1"},
           {name:"Fluoxetine (Prozac)",dose:"10mg daily",started:"02/26/2026",note:"SSRI. CYP2C19 *2 poor metabolizer (homozygous AA) — drug accumulation risk. Dose monitoring warranted.",flag:"pgx",flagLabel:"PGx: CYP2C19"},
-          {name:"Buspirone (BuSpar)",dose:"5mg BID",started:"03/14/2026",note:"Anxiolytic. Initiated after ER admission for chest pain that was initially attributed to anxiety despite structural cardiac history.",flag:"active",flagLabel:"ACTIVE"},
-          {name:"Alprazolam XR (Xanax XR)",dose:"0.5mg daily",started:"—",note:"Benzodiazepine anxiolytic.",flag:"active",flagLabel:"ACTIVE"},
+          {name:"Buspirone (BuSpar)",dose:"5mg BID",started:"-",note:"Anxiolytic. Initiated after ER admission for chest pain that was initially attributed to anxiety despite structural cardiac history.",flag:"active",flagLabel:"ACTIVE"},
           {name:"Acetaminophen",dose:"1,000mg PRN",started:"—",note:"Currently primary analgesic (ibuprofen discontinued). Inadequate for pain control. Bridge until 06/18/2026 pain management.",flag:"active",flagLabel:"BRIDGE"},
         ].map((m,i)=>(
           <div key={i} className="med-row">
@@ -1312,7 +1489,7 @@ function TabDocuments() {
     <div>
       <div className="page-header">
         <div className="page-title serif">Documents</div>
-        <div className="page-subtitle">Reference documents prepared for specialist evaluation. All clinical findings sourced directly from medical records. Research content clearly labeled throughout.</div>
+        <div className="page-subtitle">Reference documents prepared for provider evaluation. All clinical findings sourced directly from medical records. Research content clearly labeled throughout.</div>
       </div>
 
       <Section title="Available Documents" dot="#0F2537">
@@ -1381,7 +1558,7 @@ function TabDocuments() {
           </div>
         </div>
         <AlertBox type="info">
-          Research content does not alter the clinical classification of any confirmed diagnosis. It is supplementary context — a computational layer to inform specialist thinking. All AlphaGenome analyses were conducted by the patient using the Google DeepMind API. Access this portal again at any time using the same URL and key.
+          Research content does not alter the clinical classification of any confirmed diagnosis. It is supplementary context — a computational layer to inform provider thinking. All AlphaGenome analyses were conducted by the patient using the Google DeepMind API. Access this portal again at any time using the same URL and key.
         </AlertBox>
       </Section>
     </div>
@@ -1396,6 +1573,7 @@ const TABS = [
   { id:'overview', label:'Overview', icon:'◎' },
   { id:'cardiac', label:'Cardiac', icon:'♥' },
   { id:'pulmonary', label:'Pulmonary', icon:'⊕' },
+  { id:'rheumatology', label:'Rheumatology', icon:'⊘' },
   { id:'ctd', label:'Connective Tissue', icon:'⬡' },
   { id:'surgical', label:'Surgical & Trauma', icon:'⚕' },
   { id:'pain', label:'Pain & MSK', icon:'⚡' },
@@ -1413,6 +1591,7 @@ function App() {
     overview: <TabOverview/>,
     cardiac: <TabCardiac/>,
     pulmonary: <TabPulmonary/>,
+    rheumatology: <TabRheumatology/>,
     ctd: <TabCTD/>,
     surgical: <TabSurgicalTrauma/>,
     pain: <TabPain/>,
