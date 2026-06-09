@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 
 // ── Styles ──────────────────────────────────────────────────────────────────
@@ -22,12 +22,37 @@ const S = `
 .topbar-spacer{flex:1}
 .topbar-badge{font-size:11px;background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);padding:4px 10px;border-radius:20px;letter-spacing:0.04em}
 
-.tabnav{background:white;border-bottom:1px solid var(--gray-200);padding:0 32px;display:flex;gap:2px;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none;position:sticky;top:60px;z-index:99}
+.tabnav{background:white;border-bottom:1px solid var(--gray-200);padding:0 32px;display:flex;gap:2px;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none;position:sticky;top:60px;z-index:99;-webkit-overflow-scrolling:touch;scroll-behavior:smooth}
 .tabnav::-webkit-scrollbar{display:none}
-.tab{padding:14px 16px;font-size:13px;font-weight:500;color:var(--gray-600);border:none;background:none;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all 0.15s;letter-spacing:0.01em}
+.tab{padding:14px 16px;font-size:13px;font-weight:500;color:var(--gray-600);border:none;background:none;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all 0.15s;letter-spacing:0.01em;flex-shrink:0}
 .tab:hover{color:var(--navy)}
 .tab.active{color:var(--blue);border-bottom-color:var(--blue);font-weight:600}
 .tab-icon{margin-right:6px;font-size:14px}
+
+.mob-nav-bar{display:none}
+.mob-nav-trigger{width:100%;display:flex;align-items:center;gap:10px;padding:12px 16px;background:white;border:none;border-bottom:1px solid var(--gray-200);cursor:pointer;text-align:left;font-family:inherit;font-size:14px;font-weight:600;color:var(--navy);position:sticky;top:60px;z-index:99}
+.mob-nav-trigger-icon{font-size:16px;line-height:1;color:var(--blue)}
+.mob-nav-trigger-label{flex:1}
+.mob-nav-trigger-chevron{font-size:12px;color:var(--gray-600);transition:transform 0.2s}
+.mob-nav-trigger-chevron.open{transform:rotate(180deg)}
+.mob-nav-overlay{position:fixed;inset:0;background:rgba(15,37,55,0.45);z-index:150;opacity:0;pointer-events:none;transition:opacity 0.2s}
+.mob-nav-overlay.open{opacity:1;pointer-events:all}
+.mob-nav-panel{position:fixed;left:0;right:0;top:60px;max-height:min(70vh,520px);background:white;z-index:151;border-bottom-left-radius:16px;border-bottom-right-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.18);transform:translateY(-8px);opacity:0;pointer-events:none;transition:transform 0.22s cubic-bezier(0.4,0,0.2,1),opacity 0.2s;display:flex;flex-direction:column;overflow:hidden}
+.mob-nav-panel.open{transform:translateY(0);opacity:1;pointer-events:all}
+.mob-nav-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 10px;border-bottom:1px solid var(--gray-100);flex-shrink:0}
+.mob-nav-head-title{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray-600)}
+.mob-nav-close{background:none;border:none;font-size:22px;line-height:1;color:var(--gray-600);cursor:pointer;padding:4px}
+.mob-nav-list{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:8px;flex:1}
+.mob-nav-item{display:flex;align-items:center;gap:12px;width:100%;padding:12px 14px;border:none;background:none;border-radius:var(--radius);cursor:pointer;text-align:left;font-family:inherit;font-size:14px;font-weight:500;color:var(--gray-800);transition:background 0.15s}
+.mob-nav-item:hover,.mob-nav-item:active{background:var(--gray-100)}
+.mob-nav-item.active{background:var(--blue-light);color:var(--blue);font-weight:600}
+.mob-nav-item-icon{font-size:16px;width:22px;text-align:center;flex-shrink:0}
+.mob-nav-item-label{flex:1}
+.mob-nav-item-check{font-size:14px;color:var(--blue);opacity:0}
+.mob-nav-item.active .mob-nav-item-check{opacity:1}
+.topbar-menu-btn{display:none;align-items:center;justify-content:center;width:40px;height:40px;border:none;border-radius:var(--radius);background:rgba(255,255,255,0.1);color:white;font-size:20px;cursor:pointer;flex-shrink:0;margin-left:auto}
+.topbar-menu-btn:hover{background:rgba(255,255,255,0.18)}
+.topbar-menu-btn.open{background:rgba(255,255,255,0.2)}
 
 .main{flex:1;padding:32px;max-width:1100px;margin:0 auto;width:100%}
 
@@ -173,12 +198,31 @@ td.flag-neg{color:var(--green);font-weight:600}
 .med-flag.active{background:#DCFCE7;color:#14532D}
 .med-flag.pending{background:#FEF3C7;color:#92400E}
 
-@media(max-width:640px){
-  .topbar{padding:0 16px}
-  .tabnav{padding:0 8px}
+@media(max-width:768px){
+  .topbar{padding:0 14px;height:56px;gap:12px}
+  .topbar-title{font-size:17px}
+  .topbar-sub{display:none}
+  .topbar-spacer{display:none}
+  .topbar-badge{font-size:10px;padding:3px 8px;white-space:nowrap}
+  .topbar-menu-btn{display:flex}
+  .tabnav-desktop{display:none}
+  .mob-nav-bar{display:block}
+  .mob-nav-trigger{top:56px}
+  .mob-nav-panel{top:56px}
   .main{padding:16px}
+  .page-title{font-size:26px}
+  .section-header{padding:16px 18px 12px}
+  .section-body{padding:16px 18px}
   .stat-row{grid-template-columns:1fr 1fr}
   .finding-grid{grid-template-columns:1fr}
+  .med-row{flex-direction:column;gap:6px}
+  .med-name{min-width:0}
+  .med-flag{margin-left:0;align-self:flex-start}
+  .gate-card{padding:32px 24px}
+}
+@media(max-width:480px){
+  .topbar-badge{display:none}
+  .stat-row{grid-template-columns:1fr}
 }
 `;
 
@@ -1586,6 +1630,34 @@ const TABS = [
 function App() {
   const [unlocked, setUnlocked] = useState(false);
   const [tab, setTab] = useState('overview');
+  const [navOpen, setNavOpen] = useState(false);
+  const tabnavRef = useRef(null);
+
+  const currentTab = TABS.find(t => t.id === tab) || TABS[0];
+
+  useEffect(() => {
+    if (!navOpen) return;
+    const onKey = (e) => e.key === 'Escape' && setNavOpen(false);
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [navOpen]);
+
+  useEffect(() => {
+    if (!navOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = prev; };
+  }, [navOpen]);
+
+  useEffect(() => {
+    const el = tabnavRef.current?.querySelector('.tab.active');
+    el?.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+  }, [tab]);
+
+  const selectTab = (id) => {
+    setTab(id);
+    setNavOpen(false);
+  };
 
   const content = {
     overview: <TabOverview/>,
@@ -1614,9 +1686,54 @@ function App() {
           <div className="topbar-sub">Sarah K. Sahl · DOB 05/18/1984</div>
           <div className="topbar-spacer"/>
           <div className="topbar-badge">Provider Access</div>
+          <button
+            type="button"
+            className={`topbar-menu-btn${navOpen ? ' open' : ''}`}
+            aria-label={navOpen ? 'Close navigation' : 'Open navigation'}
+            aria-expanded={navOpen}
+            onClick={() => setNavOpen(v => !v)}
+          >
+            {navOpen ? '×' : '☰'}
+          </button>
         </div>
 
-        <div className="tabnav">
+        <div className="mob-nav-bar">
+          <button
+            type="button"
+            className="mob-nav-trigger"
+            aria-label="Choose section"
+            aria-expanded={navOpen}
+            onClick={() => setNavOpen(v => !v)}
+          >
+            <span className="mob-nav-trigger-icon">{currentTab.icon}</span>
+            <span className="mob-nav-trigger-label">{currentTab.label}</span>
+            <span className={`mob-nav-trigger-chevron${navOpen ? ' open' : ''}`}>▾</span>
+          </button>
+        </div>
+
+        <div className={`mob-nav-overlay${navOpen ? ' open' : ''}`} onClick={() => setNavOpen(false)} aria-hidden={!navOpen}/>
+        <nav className={`mob-nav-panel${navOpen ? ' open' : ''}`} aria-label="Portal sections" aria-hidden={!navOpen}>
+          <div className="mob-nav-head">
+            <span className="mob-nav-head-title">Sarah K. Sahl · DOB 05/18/1984</span>
+            <button type="button" className="mob-nav-close" aria-label="Close navigation" onClick={() => setNavOpen(false)}>×</button>
+          </div>
+          <div className="mob-nav-list">
+            {TABS.map(t => (
+              <button
+                key={t.id}
+                type="button"
+                className={`mob-nav-item${tab === t.id ? ' active' : ''}`}
+                onClick={() => selectTab(t.id)}
+              >
+                <span className="mob-nav-item-icon">{t.icon}</span>
+                <span className="mob-nav-item-label">{t.label}</span>
+                <span className="mob-nav-item-check">✓</span>
+              </button>
+            ))}
+          </div>
+        </nav>
+
+        <div className="tabnav tabnav-desktop" ref={tabnavRef}>
           {TABS.map(t=>(
             <button key={t.id} className={`tab${tab===t.id?' active':''}`} onClick={()=>setTab(t.id)}>
               <span className="tab-icon">{t.icon}</span>{t.label}
