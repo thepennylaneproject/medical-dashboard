@@ -1,0 +1,16 @@
+condition	rsid	gene	genotype	note
+EGPA	rs17212014	HLA-DQ	NOT_ON_CHIP	MPO+ EGPA sentinel; strongest HLA-DQ signal
+EGPA	rs9274704	HLA-DQ	NOT_ON_CHIP	EGPA GWAS; strong in MPO+ subset
+EGPA	rs1837253	TSLP	5:110401872:CT	Eosinophil/asthma axis; EGPA susceptibility
+EGPA	rs72946301	BCL2L11	NOT_ON_CHIP	EGPA GWAS locus
+EGPA	rs11745587	IRF1/IL5	NOT_ON_CHIP	ANCA-negative EGPA; eosinophil/IL-5 pathway
+EGPA	rs72689399	GPA33	NOT_ON_CHIP	ANCA-negative EGPA
+EGPA	rs9290877	LPP	3:188442480:CT	EGPA; asthma/eosinophil overlap
+EGPA	rs6454802	BACH2	6:90814199:CT	Immune-mediated disease locus
+EGPA	rs42041	CDK6	NOT_ON_CHIP	EGPA; eosinophil count association
+EGPA	rs34574566	10p14	NOT_ON_CHIP	EGPA GWAS
+EGPA	rs6931740	HLA	NOT_ON_CHIP	HLA region EGPA
+EGPA	rs78478398	12q21	NOT_ON_CHIP	MPO+ EGPA chr12 signal
+hEDS_GWAS	rs2708184	ACKR3 region	NOT_ON_CHIP	hEDS GWAS lead variant (chr2)
+hEDS_GWAS	rs16880769	chr8 locus	NOT_ON_CHIP	hEDS GWAS lead variant (chr8)
+hEDS_GWAS	rs2600746	ACKR3 region	NOT_ON_CHIP	hEDS — LD proxy / regulatory variant

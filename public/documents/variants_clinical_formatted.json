@@ -1,0 +1,533 @@
+{
+  "title": "Clinical Variant Extract \u2014 Sarah K. Sahl",
+  "subtitle": "Source: 23andMe raw genotype file  \u00b7  27 clinically characterized variants  \u00b7  hg19 coordinates  \u00b7  Research use only \u2014 not clinical diagnostic results",
+  "clinicalVariants": [
+    {
+      "type": "category",
+      "label": "AUTONOMIC & CARDIAC",
+      "color": "#831843"
+    },
+    {
+      "type": "variant",
+      "rsid": "rs1801253",
+      "gene": "ADRB1",
+      "annotation": "Arg389Gly",
+      "category": "Autonomic & Cardiac",
+      "chrom": "chr10",
+      "pos": "115,805,056",
+      "genotype": "CG",
+      "zygosity": "heterozygous",
+      "note": "Arg389Gly. Beta-1 receptor variant affecting metoprolol response. Top 0.3% AlphaGenome signal in cardiac tissue."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs7164883",
+      "gene": "HCN4",
+      "annotation": "sinus node",
+      "category": "Autonomic & Cardiac",
+      "chrom": "chr15",
+      "pos": "73,652,174",
+      "genotype": "AA",
+      "zygosity": "homozygous",
+      "note": "Sinus node channel variant. Relevant to Inappropriate Sinus Tachycardia diagnosis."
+    },
+    {
+      "type": "category",
+      "label": "BONE & MUSCULOSKELETAL",
+      "color": "#374151"
+    },
+    {
+      "type": "variant",
+      "rsid": "rs731236",
+      "gene": "VDR",
+      "annotation": "TaqI",
+      "category": "Bone & Musculoskeletal",
+      "chrom": "chr12",
+      "pos": "48,238,757",
+      "genotype": "AA",
+      "zygosity": "homozygous",
+      "note": "VDR TaqI \u2014 affects vitamin D receptor function. Relevant to bone density and immune regulation."
+    },
+    {
+      "type": "category",
+      "label": "CONNECTIVE TISSUE",
+      "color": "#1F4E79"
+    },
+    {
+      "type": "variant",
+      "rsid": "rs1800255",
+      "gene": "COL3A1",
+      "annotation": "Ala698Thr",
+      "category": "Connective Tissue",
+      "chrom": "chr2",
+      "pos": "189,864,080",
+      "genotype": "AG",
+      "zygosity": "heterozygous",
+      "note": "Ala698Thr. vEDS-associated COL3A1 variant. Highest AlphaGenome signal in full batch (quantile 0.9995) in cardiac tissue. Pending formal genetics evaluation."
+    },
+    {
+      "type": "category",
+      "label": "HOMOCYSTEINE & METHYLATION",
+      "color": "#1E3A5F"
+    },
+    {
+      "type": "variant",
+      "rsid": "rs1801133",
+      "gene": "MTHFR",
+      "annotation": "c.677C>T",
+      "category": "Homocysteine & Methylation",
+      "chrom": "chr1",
+      "pos": "11,856,378",
+      "genotype": "GG",
+      "zygosity": "homozygous",
+      "note": "c.677C>T. Homozygous (GG) \u2014 reduced MTHFR enzyme activity. Affects folate/homocysteine metabolism. Combined with rs1801131, both MTHFR checkpoints affected."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs1801131",
+      "gene": "MTHFR",
+      "annotation": "c.1298A>C",
+      "category": "Homocysteine & Methylation",
+      "chrom": "chr1",
+      "pos": "11,854,476",
+      "genotype": "GT",
+      "zygosity": "heterozygous",
+      "note": "c.1298A>C. Heterozygous \u2014 second MTHFR variant. Compounds homocysteine clearance risk."
+    },
+    {
+      "type": "category",
+      "label": "INFLAMMATORY CYTOKINES",
+      "color": "#7C2D12"
+    },
+    {
+      "type": "variant",
+      "rsid": "rs1800795",
+      "gene": "IL6",
+      "annotation": "-174G>C",
+      "category": "Inflammatory Cytokines",
+      "chrom": "chr7",
+      "pos": "22,766,645",
+      "genotype": "CC",
+      "zygosity": "homozygous",
+      "note": "IL-6 promoter variant. Modulates baseline IL-6 expression \u2014 relevant to chronic inflammatory state."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs1800629",
+      "gene": "TNF",
+      "annotation": "-308G>A",
+      "category": "Inflammatory Cytokines",
+      "chrom": "chr6",
+      "pos": "31,543,031",
+      "genotype": "GG",
+      "zygosity": "homozygous",
+      "note": "TNF-alpha promoter variant. Modulates TNF production. Relevant to systemic inflammation."
+    },
+    {
+      "type": "category",
+      "label": "NEURODIVERGENCE & PSYCHIATRIC",
+      "color": "#4C1D95"
+    },
+    {
+      "type": "variant",
+      "rsid": "rs6265",
+      "gene": "BDNF",
+      "annotation": "Val66Met",
+      "category": "Neurodivergence & Psychiatric",
+      "chrom": "chr11",
+      "pos": "27,679,916",
+      "genotype": "CC",
+      "zygosity": "homozygous",
+      "note": "BDNF Val66Met. Affects BDNF secretion and neuroplasticity. Relevant to pain sensitization and psychiatric risk."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs1360780",
+      "gene": "FKBP5",
+      "annotation": "PTSD stress response",
+      "category": "Neurodivergence & Psychiatric",
+      "chrom": "chr6",
+      "pos": "35,607,571",
+      "genotype": "TT",
+      "zygosity": "homozygous",
+      "note": "FKBP5 \u2014 PTSD stress response variant. Homozygous TT. Affects glucocorticoid receptor sensitivity and stress axis regulation."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs3800373",
+      "gene": "FKBP5",
+      "annotation": "PTSD stress response",
+      "category": "Neurodivergence & Psychiatric",
+      "chrom": "chr6",
+      "pos": "35,542,476",
+      "genotype": "CC",
+      "zygosity": "homozygous",
+      "note": "FKBP5 \u2014 second PTSD variant. Homozygous CC. Compounds stress-axis dysregulation."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs1042173",
+      "gene": "SLC6A4",
+      "annotation": "A\u2192T 3'UTR",
+      "category": "Neurodivergence & Psychiatric",
+      "chrom": "chr17",
+      "pos": "28,525,011",
+      "genotype": "AA",
+      "zygosity": "homozygous",
+      "note": "SLC6A4 3'UTR variant. Serotonin transporter. Relevant to fluoxetine response and serotonin system."
+    },
+    {
+      "type": "category",
+      "label": "PHARMACOGENOMICS",
+      "color": "#1F4E79"
+    },
+    {
+      "type": "variant",
+      "rsid": "rs4680",
+      "gene": "COMT",
+      "annotation": "Val158Met pain sensitivity",
+      "category": "Pharmacogenomics",
+      "chrom": "chr22",
+      "pos": "19,951,271",
+      "genotype": "AG",
+      "zygosity": "heterozygous",
+      "note": "COMT Val158Met. Heterozygous AG = intermediate catecholamine clearance. Amplified pain signal transmission. Top 0.3% AlphaGenome signal in brain tissue."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs4244285",
+      "gene": "CYP2C19",
+      "annotation": "*2 allele",
+      "category": "Pharmacogenomics",
+      "chrom": "chr10",
+      "pos": "96,541,616",
+      "genotype": "AA",
+      "zygosity": "homozygous",
+      "note": "CYP2C19 *2 allele. Homozygous AA = poor metabolizer. Reduced metabolism of fluoxetine and other CYP2C19 substrates. Drug accumulation risk."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs4986893",
+      "gene": "CYP2C19",
+      "annotation": "*3 allele",
+      "category": "Pharmacogenomics",
+      "chrom": "chr10",
+      "pos": "96,540,410",
+      "genotype": "GG",
+      "zygosity": "homozygous",
+      "note": "CYP2C19 *3 allele. Homozygous GG = reference. No additional CYP2C19 *3 impact."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs12248560",
+      "gene": "CYP2C19",
+      "annotation": "*17 allele (rapid)",
+      "category": "Pharmacogenomics",
+      "chrom": "chr10",
+      "pos": "96,521,657",
+      "genotype": "CC",
+      "zygosity": "homozygous",
+      "note": "CYP2C19 *17 allele. Rapid metabolizer allele. Homozygous CC = reference (not rapid)."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs1799853",
+      "gene": "CYP2C9",
+      "annotation": "*2 allele",
+      "category": "Pharmacogenomics",
+      "chrom": "chr10",
+      "pos": "96,702,047",
+      "genotype": "CC",
+      "zygosity": "homozygous",
+      "note": "CYP2C9 *2 allele. Homozygous CC = reduced CYP2C9 function. Affects NSAID and warfarin metabolism."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs1057910",
+      "gene": "CYP2C9",
+      "annotation": "*3 allele",
+      "category": "Pharmacogenomics",
+      "chrom": "chr10",
+      "pos": "96,741,053",
+      "genotype": "AA",
+      "zygosity": "homozygous",
+      "note": "CYP2C9 *3 allele. Homozygous AA = reference. No additional CYP2C9 *3 impact."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs5030655",
+      "gene": "CYP2D6",
+      "annotation": "*6 allele",
+      "category": "Pharmacogenomics",
+      "chrom": "chr22",
+      "pos": "42,525,086",
+      "genotype": "II",
+      "zygosity": "homozygous",
+      "note": "CYP2D6 *6 allele \u2014 non-functional allele. Affects metabolism of tramadol, atomoxetine, and other CYP2D6 substrates."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs16947",
+      "gene": "CYP2D6",
+      "annotation": "*2 allele",
+      "category": "Pharmacogenomics",
+      "chrom": "chr22",
+      "pos": "42,523,943",
+      "genotype": "--",
+      "zygosity": "homozygous",
+      "note": "CYP2D6 *2 allele \u2014 missing data (--). May indicate gene deletion or copy number variant. CYP2D6 metabolizer status requires clinical testing."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs1799971",
+      "gene": "OPRM1",
+      "annotation": "A118G opioid sensitivity",
+      "category": "Pharmacogenomics",
+      "chrom": "chr6",
+      "pos": "154,360,797",
+      "genotype": "AA",
+      "zygosity": "homozygous",
+      "note": "OPRM1 A118G. Homozygous AA = altered opioid receptor binding affinity. May require higher opioid doses for equivalent analgesic effect."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs4149056",
+      "gene": "SLCO1B1",
+      "annotation": "*5 statin myopathy risk",
+      "category": "Pharmacogenomics",
+      "chrom": "chr12",
+      "pos": "21,331,549",
+      "genotype": "TT",
+      "zygosity": "homozygous",
+      "note": "SLCO1B1 *5 \u2014 statin myopathy risk. Homozygous TT = increased risk of statin-induced myopathy. Monitor for myalgia on rosuvastatin."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs9923231",
+      "gene": "VKORC1",
+      "annotation": "-1639G>A warfarin sensitivity",
+      "category": "Pharmacogenomics",
+      "chrom": "chr16",
+      "pos": "31,107,689",
+      "genotype": "CT",
+      "zygosity": "heterozygous",
+      "note": "VKORC1 -1639G>A. Heterozygous CT \u2014 intermediate warfarin sensitivity. High AlphaGenome signal in muscle tissue (quantile 0.9995). Not currently on warfarin."
+    },
+    {
+      "type": "category",
+      "label": "PLATELET & COAGULATION",
+      "color": "#78350F"
+    },
+    {
+      "type": "variant",
+      "rsid": "rs6025",
+      "gene": "F5",
+      "annotation": "p.R506Q Factor V Leiden",
+      "category": "Platelet & Coagulation",
+      "chrom": "chr1",
+      "pos": "169,519,049",
+      "genotype": "CC",
+      "zygosity": "homozygous",
+      "note": "F5 Factor V Leiden. Homozygous CC = reference (no Leiden mutation). Factor V Leiden excluded."
+    },
+    {
+      "type": "category",
+      "label": "PULMONARY & ASTHMA",
+      "color": "#065F46"
+    },
+    {
+      "type": "variant",
+      "rsid": "rs1042713",
+      "gene": "ADRB2",
+      "annotation": "Arg16Gly",
+      "category": "Pulmonary & Asthma",
+      "chrom": "chr5",
+      "pos": "148,206,440",
+      "genotype": "GG",
+      "zygosity": "homozygous",
+      "note": "ADRB2 Arg16Gly. Homozygous GG = reference for this variant. See rs1042714 for active ADRB2 signal."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs1042714",
+      "gene": "ADRB2",
+      "annotation": "Gln27Glu",
+      "category": "Pulmonary & Asthma",
+      "chrom": "chr5",
+      "pos": "148,206,473",
+      "genotype": "CG",
+      "zygosity": "heterozygous",
+      "note": "ADRB2 Gln27Glu. Heterozygous CG \u2014 beta-2 receptor variant. Top 0.5% AlphaGenome signal in lung tissue. Affects albuterol and salmeterol target receptor."
+    },
+    {
+      "type": "variant",
+      "rsid": "rs37972",
+      "gene": "GLCCI1",
+      "annotation": "steroid resistance asthma",
+      "category": "Pulmonary & Asthma",
+      "chrom": "chr7",
+      "pos": "8,007,509",
+      "genotype": "CT",
+      "zygosity": "heterozygous",
+      "note": "GLCCI1 steroid resistance. Heterozygous CT \u2014 associated with reduced FEV1 improvement after ICS. Genomic correlate for documented steroid resistance."
+    }
+  ],
+  "heterozygous": {
+    "headers": [
+      "rsID",
+      "Gene",
+      "Variant",
+      "Category",
+      "Genotype",
+      "AlphaGenome Signal / Note"
+    ],
+    "rows": [
+      {
+        "rsID": "rs1801253",
+        "Gene": "ADRB1",
+        "Variant": "Arg389Gly",
+        "Category": "Autonomic & Cardiac",
+        "Genotype": "CG",
+        "AlphaGenome Signal / Note": "Arg389Gly. Beta-1 receptor variant affecting metoprolol response. Top 0.3% AlphaGenome signal in cardiac tissue."
+      },
+      {
+        "rsID": "rs1800255",
+        "Gene": "COL3A1",
+        "Variant": "Ala698Thr",
+        "Category": "Connective Tissue",
+        "Genotype": "AG",
+        "AlphaGenome Signal / Note": "Ala698Thr. vEDS-associated COL3A1 variant. Highest AlphaGenome signal in full batch (quantile 0.9995) in cardiac tissue. Pending formal genetics evaluation."
+      },
+      {
+        "rsID": "rs1801131",
+        "Gene": "MTHFR",
+        "Variant": "c.1298A>C",
+        "Category": "Homocysteine & Methylation",
+        "Genotype": "GT",
+        "AlphaGenome Signal / Note": "c.1298A>C. Heterozygous \u2014 second MTHFR variant. Compounds homocysteine clearance risk."
+      },
+      {
+        "rsID": "rs4680",
+        "Gene": "COMT",
+        "Variant": "Val158Met pain sensitivity",
+        "Category": "Pharmacogenomics",
+        "Genotype": "AG",
+        "AlphaGenome Signal / Note": "COMT Val158Met. Heterozygous AG = intermediate catecholamine clearance. Amplified pain signal transmission. Top 0.3% AlphaGenome signal in brain tissue."
+      },
+      {
+        "rsID": "rs9923231",
+        "Gene": "VKORC1",
+        "Variant": "-1639G>A warfarin sensitivity",
+        "Category": "Pharmacogenomics",
+        "Genotype": "CT",
+        "AlphaGenome Signal / Note": "VKORC1 -1639G>A. Heterozygous CT \u2014 intermediate warfarin sensitivity. High AlphaGenome signal in muscle tissue (quantile 0.9995). Not currently on warfarin."
+      },
+      {
+        "rsID": "rs1042714",
+        "Gene": "ADRB2",
+        "Variant": "Gln27Glu",
+        "Category": "Pulmonary & Asthma",
+        "Genotype": "CG",
+        "AlphaGenome Signal / Note": "ADRB2 Gln27Glu. Heterozygous CG \u2014 beta-2 receptor variant. Top 0.5% AlphaGenome signal in lung tissue. Affects albuterol and salmeterol target receptor."
+      },
+      {
+        "rsID": "rs37972",
+        "Gene": "GLCCI1",
+        "Variant": "steroid resistance asthma",
+        "Category": "Pulmonary & Asthma",
+        "Genotype": "CT",
+        "AlphaGenome Signal / Note": "GLCCI1 steroid resistance. Heterozygous CT \u2014 associated with reduced FEV1 improvement after ICS. Genomic correlate for documented steroid resistance."
+      }
+    ]
+  },
+  "pharmacogenomics": {
+    "title": "Pharmacogenomics Summary \u2014 Drug Metabolism & Response",
+    "subtitle": "Research-grade data from 23andMe. For clinical prescribing decisions, validated pharmacogenomic testing (e.g., GeneSight) is recommended.",
+    "headers": [
+      "Gene / Enzyme",
+      "Variant",
+      "Genotype",
+      "Affected Drugs",
+      "Clinical Implication"
+    ],
+    "rows": [
+      {
+        "Gene / Enzyme": "CYP2C19",
+        "Variant": "*2 allele (rs4244285)",
+        "Genotype": "AA (poor metabolizer)",
+        "Affected Drugs": "Fluoxetine, PPIs, clopidogrel",
+        "Clinical Implication": "Significantly reduced CYP2C19 activity. Drug accumulation risk. Currently on fluoxetine \u2014 dose monitoring warranted."
+      },
+      {
+        "Gene / Enzyme": "CYP2D6",
+        "Variant": "*6 allele (rs5030655)",
+        "Genotype": "II (variant)",
+        "Affected Drugs": "Tramadol, atomoxetine, codeine",
+        "Clinical Implication": "Non-functional CYP2D6 allele. Tramadol may be less effective (reduced conversion to active form). Atomoxetine levels may be elevated."
+      },
+      {
+        "Gene / Enzyme": "CYP2C9",
+        "Variant": "*2 allele (rs1799853)",
+        "Genotype": "CC (reduced function)",
+        "Affected Drugs": "NSAIDs, warfarin, some analgesics",
+        "Clinical Implication": "Reduced CYP2C9 activity. NSAIDs are also contraindicated on cardiac/renal grounds \u2014 dual contraindication."
+      },
+      {
+        "Gene / Enzyme": "SLCO1B1",
+        "Variant": "*5 (rs4149056)",
+        "Genotype": "TT (increased risk)",
+        "Affected Drugs": "Rosuvastatin (Crestor)",
+        "Clinical Implication": "Increased statin myopathy risk. Currently on rosuvastatin 5mg. Monitor myalgia \u2014 note: baseline MSK pain from TTN/CTD may confound."
+      },
+      {
+        "Gene / Enzyme": "COMT",
+        "Variant": "Val158Met (rs4680)",
+        "Genotype": "AG (intermediate)",
+        "Affected Drugs": "All analgesics (pain sensitivity)",
+        "Clinical Implication": "Intermediate catecholamine clearance \u2192 amplified pain signaling. Supports individualized analgesic dosing. Top 0.3% AlphaGenome signal in brain tissue."
+      },
+      {
+        "Gene / Enzyme": "OPRM1",
+        "Variant": "A118G (rs1799971)",
+        "Genotype": "AA (homozygous)",
+        "Affected Drugs": "Tramadol, opioids generally",
+        "Clinical Implication": "Altered opioid receptor binding. May require higher doses for equivalent analgesic effect."
+      },
+      {
+        "Gene / Enzyme": "ADRB1",
+        "Variant": "Arg389Gly (rs1801253)",
+        "Genotype": "CG (heterozygous)",
+        "Affected Drugs": "Metoprolol (beta-1 blocker)",
+        "Clinical Implication": "Beta-1 receptor variant. AlphaGenome quantile 0.9973 in cardiac tissue. Metoprolol titration target may respond atypically."
+      },
+      {
+        "Gene / Enzyme": "ADRB2",
+        "Variant": "Gln27Glu (rs1042714)",
+        "Genotype": "CG (heterozygous)",
+        "Affected Drugs": "Albuterol, salmeterol",
+        "Clinical Implication": "Beta-2 receptor variant. AlphaGenome quantile 0.9946 in lung tissue. Bronchodilator target receptor may have altered function."
+      },
+      {
+        "Gene / Enzyme": "GLCCI1",
+        "Variant": "Steroid resistance (rs37972)",
+        "Genotype": "CT (heterozygous)",
+        "Affected Drugs": "Inhaled corticosteroids",
+        "Clinical Implication": "Associated with reduced FEV1 improvement after ICS. Genomic correlate for documented steroid resistance pattern."
+      },
+      {
+        "Gene / Enzyme": "VKORC1",
+        "Variant": "-1639G>A (rs9923231)",
+        "Genotype": "CT (heterozygous)",
+        "Affected Drugs": "Warfarin (not currently prescribed)",
+        "Clinical Implication": "Intermediate warfarin sensitivity. Not currently on warfarin. Flag if anticoagulation is ever considered."
+      },
+      {
+        "Gene / Enzyme": "MTHFR",
+        "Variant": "c.677C>T (rs1801133)",
+        "Genotype": "GG (homozygous)",
+        "Affected Drugs": "Folate/B12/homocysteine pathway",
+        "Clinical Implication": "Homozygous \u2014 reduced MTHFR activity. Combined with rs1801131 heterozygous: both checkpoints affected. Monitor homocysteine; ensure adequate B12/folate."
+      }
+    ]
+  }
+}

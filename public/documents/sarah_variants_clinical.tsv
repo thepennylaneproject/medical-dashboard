@@ -1,0 +1,28 @@
+rsid	gene	annotation	category	chrom	pos_hg19	genotype	zygosity	priority
+rs1801253	ADRB1	Arg389Gly	autonomic_cardiac	chr10	115805056	CG	heterozygous	HIGH - clinically characterized
+rs7164883	HCN4	sinus node	autonomic_cardiac	chr15	73652174	AA	homozygous	HIGH - clinically characterized
+rs731236	VDR	TaqI	bone_musculoskeletal	chr12	48238757	AA	homozygous	HIGH - clinically characterized
+rs1800255	COL3A1	Ala698Thr	connective_tissue	chr2	189864080	AG	heterozygous	HIGH - clinically characterized
+rs1801133	MTHFR	c.677C>T	homocysteine_methylation	chr1	11856378	GG	homozygous	HIGH - clinically characterized
+rs1801131	MTHFR	c.1298A>C	homocysteine_methylation	chr1	11854476	GT	heterozygous	HIGH - clinically characterized
+rs1800795	IL6	-174G>C	inflammatory_cytokines	chr7	22766645	CC	homozygous	HIGH - clinically characterized
+rs1800629	TNF	-308G>A	inflammatory_cytokines	chr6	31543031	GG	homozygous	HIGH - clinically characterized
+rs1042173	SLC6A4	A→T 3'UTR	neurodivergence_psychiatric	chr17	28525011	AA	homozygous	HIGH - clinically characterized
+rs1360780	FKBP5	PTSD stress response	neurodivergence_psychiatric	chr6	35607571	TT	homozygous	HIGH - clinically characterized
+rs3800373	FKBP5	PTSD stress response	neurodivergence_psychiatric	chr6	35542476	CC	homozygous	HIGH - clinically characterized
+rs6265	BDNF	Val66Met	neurodivergence_psychiatric	chr11	27679916	CC	homozygous	HIGH - clinically characterized
+rs5030655	CYP2D6	*6 allele	pharmacogenomics	chr22	42525086	II	homozygous	HIGH - clinically characterized
+rs16947	CYP2D6	*2 allele	pharmacogenomics	chr22	42523943	--	homozygous	HIGH - clinically characterized
+rs4244285	CYP2C19	*2 allele	pharmacogenomics	chr10	96541616	AA	homozygous	HIGH - clinically characterized
+rs4986893	CYP2C19	*3 allele	pharmacogenomics	chr10	96540410	GG	homozygous	HIGH - clinically characterized
+rs12248560	CYP2C19	*17 allele (rapid)	pharmacogenomics	chr10	96521657	CC	homozygous	HIGH - clinically characterized
+rs1799853	CYP2C9	*2 allele	pharmacogenomics	chr10	96702047	CC	homozygous	HIGH - clinically characterized
+rs1057910	CYP2C9	*3 allele	pharmacogenomics	chr10	96741053	AA	homozygous	HIGH - clinically characterized
+rs4149056	SLCO1B1	*5 statin myopathy risk	pharmacogenomics	chr12	21331549	TT	homozygous	HIGH - clinically characterized
+rs9923231	VKORC1	-1639G>A warfarin sensitivity	pharmacogenomics	chr16	31107689	CT	heterozygous	HIGH - clinically characterized
+rs1799971	OPRM1	A118G opioid sensitivity	pharmacogenomics	chr6	154360797	AA	homozygous	HIGH - clinically characterized
+rs4680	COMT	Val158Met pain sensitivity	pharmacogenomics	chr22	19951271	AG	heterozygous	HIGH - clinically characterized
+rs6025	F5	p.R506Q Factor V Leiden	platelet_coagulation	chr1	169519049	CC	homozygous	HIGH - clinically characterized
+rs1042713	ADRB2	Arg16Gly	pulmonary_asthma	chr5	148206440	GG	homozygous	HIGH - clinically characterized
+rs1042714	ADRB2	Gln27Glu	pulmonary_asthma	chr5	148206473	CG	heterozygous	HIGH - clinically characterized
+rs37972	GLCCI1	steroid resistance asthma	pulmonary_asthma	chr7	8007509	CT	heterozygous	HIGH - clinically characterized

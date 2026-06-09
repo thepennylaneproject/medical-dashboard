@@ -1,0 +1,12 @@
+rsid	gene	annotation	genotype	zygosity	chrom	pos_hg19	clinician_note
+rs5030655	CYP2D6	*6 allele	II	homozygous	chr22	42525086	CYP2D6 *6 — reduced function; II = homozygous deletion allele
+rs16947	CYP2D6	*2 allele	--	homozygous	chr22	42523943	CYP2D6 *2 marker; --/-- on 23andMe
+rs4244285	CYP2C19	*2 allele	AA	homozygous	chr10	96541616	CYP2C19 *2 — AA = homozygous loss-of-function allele
+rs4986893	CYP2C19	*3 allele	GG	homozygous	chr10	96540410	CYP2C19 *3 — GG = homozygous reference at *3 site
+rs12248560	CYP2C19	*17 allele (rapid)	CC	homozygous	chr10	96521657	CYP2C19 *17 — CC = ultra-rapid metabolizer allele (confirm phasing)
+rs1799853	CYP2C9	*2 allele	CC	homozygous	chr10	96702047	CYP2C9 *2 — CC = homozygous ref at *2
+rs1057910	CYP2C9	*3 allele	AA	homozygous	chr10	96741053	CYP2C9 *3 — AA = homozygous ref at *3
+rs4149056	SLCO1B1	*5 statin myopathy risk	TT	homozygous	chr12	21331549	SLCO1B1 *5 — TT hom; statin myopathy risk literature
+rs9923231	VKORC1	-1639G>A warfarin sensitivity	CT	heterozygous	chr16	31107689	VKORC1 -1639G>A — CT het; warfarin sensitivity
+rs1799971	OPRM1	A118G opioid sensitivity	AA	homozygous	chr6	154360797	OPRM1 A118G — AA hom
+rs4680	COMT	Val158Met pain sensitivity	AG	heterozygous	chr22	19951271	COMT Val158Met — AG het; pain/catecholamine context
