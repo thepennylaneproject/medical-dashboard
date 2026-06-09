@@ -582,7 +582,7 @@ function TabPulmonary() {
     <div>
       <div className="page-header">
         <div className="page-title serif">Pulmonary</div>
-        <div className="page-subtitle">Severe persistent asthma with an eosinophilic-predominant pattern, documented steroid resistance, and mepolizumab (Nucala) prescribed — first dose at Mayo 04/16/2026; home supply pending at Accredo Specialty Pharmacy as of June 2026. The EGPA/HES differential is not yet formally closed.</div>
+        <div className="page-subtitle">Severe persistent asthma with an eosinophilic-predominant pattern, documented steroid resistance, and mepolizumab (Nucala) prescribed — first dose pending at Accredo Specialty Pharmacy as of June 2026. The EGPA/HES differential is not yet formally closed.</div>
       </div>
 
       <Section title="April 2026 Mayo PFT Results" dot="#DC2626">
